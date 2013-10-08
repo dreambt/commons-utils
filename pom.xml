@@ -112,6 +112,19 @@
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>
         </dependency>
+
+	    <dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-context</artifactId>
+	    </dependency>
+	    <dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-context-support</artifactId>
+	    </dependency>
+	    <dependency>
+		    <groupId>org.freemarker</groupId>
+		    <artifactId>freemarker</artifactId>
+	    </dependency>
         <!-- WEB end -->
 
         <!-- SECURITY begin -->
@@ -156,10 +169,10 @@
         <!-- GENERAL UTILS end -->
 
         <!-- OTHER UTILS begin-->
-        <dependency>
-            <groupId>org.freemarker</groupId>
-            <artifactId>freemarker</artifactId>
-        </dependency>
+	    <dependency>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-lang3</artifactId>
+	    </dependency>
 
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
@@ -212,20 +225,6 @@
             <version>1.0.4.1</version>
             <scope>compile</scope>
         </dependency>
-
-        <!-- OAuth start -->
-        <dependency><!-- ct-common 中例子使用的 OAuth -->
-            <groupId>org.scribe</groupId>
-            <artifactId>scribe</artifactId>
-            <version>1.3.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.scribe</groupId>
-            <artifactId>scribe-up</artifactId>
-            <version>1.1.0</version>
-        </dependency>
-        <!-- OAuth end -->
         <!-- OTHER UTILS end-->
 
         <!-- TEST begin -->
