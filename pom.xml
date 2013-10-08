@@ -13,7 +13,7 @@
     <!-- Basics                                                      -->
     <!-- =========================================================== -->
 
-    <groupId>cn.im47.utils</groupId>
+    <groupId>cn.im47.commons</groupId>
     <artifactId>commons-utils</artifactId>
     <name>commons-utils</name>
     <version>1.0.0</version>
