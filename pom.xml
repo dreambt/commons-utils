@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springside</groupId>
+		<artifactId>springside-parent</artifactId>
+		<version>4.1.1-SNAPSHOT</version>
+	</parent>
+
+    <!-- =========================================================== -->
+    <!-- Basics                                                      -->
+    <!-- =========================================================== -->
+
+    <groupId>cn.im47.utils</groupId>
+    <artifactId>commons-utils</artifactId>
+    <name>commons-utils</name>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <description>im47.cn :: commons :: utils</description>
+
+    <!-- 项目属性 -->
+    <properties>
+        <!--
+        <jdbc.driver.groupId>com.h2database</jdbc.driver.groupId>
+        <jdbc.driver.artifactId>h2</jdbc.driver.artifactId>
+        <jdbc.driver.version>${h2.version}</jdbc.driver.version>
+        -->
+
+        <!--
+              <jdbc.driver.groupId>com.oracle</jdbc.driver.groupId>
+              <jdbc.driver.artifactId>ojdbc14</jdbc.driver.artifactId>
+              <jdbc.driver.version>10.2.0.3</jdbc.driver.version>
+          -->
+
+        <jdbc.driver.groupId>mysql</jdbc.driver.groupId>
+        <jdbc.driver.artifactId>mysql-connector-java</jdbc.driver.artifactId>
+        <jdbc.driver.version>5.1.26</jdbc.driver.version>
+
+        <!--
+        <sonar.language>web</sonar.language>
+        <sonar.web.sourceDirectory>src/main/webapp</sonar.web.sourceDirectory>
+        <sonar.dynamicAnalysis>false</sonar.dynamicAnalysis> -->
+    </properties>
+
+    <!-- =========================================================== -->
+    <!-- Repositories                                                -->
+    <!-- =========================================================== -->
+    <!--
+    <repositories>
+        <repository>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+                <checksumPolicy>warn</checksumPolicy>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>public</id>
+            <name>Public Repositories</name>
+            <url>http://192.168.1.224:8080/nexus/content/groups/public</url>
+            <layout>default</layout>
+        </repository>
+    </repositories>
+
+    <distributionManagement>
+        <repository>
+            <id>releases</id>
+            <name>Release Repository</name>
+            <url>http://192.168.1.224:8080/nexus/content/repositories/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>Snapshot Repository</name>
+            <url>http://192.168.1.224:8080/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement> -->
+
+    <!-- =========================================================== -->
+    <!-- Dependencies                                                -->
+    <!-- =========================================================== -->
+
+    <dependencies>
+        <!-- SPRINGSIDE begin -->
+        <dependency>
+            <groupId>org.springside</groupId>
+            <artifactId>springside-core</artifactId>
+        </dependency>
+        <!-- SPRINGSIDE end -->
+
+        <!-- PERSISTENCE begin -->
+        <!-- mybatis -->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+        </dependency>
+        <!-- PERSISTENCE end -->
+
+        <!-- WEB begin -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+        </dependency>
+        <!-- WEB end -->
+
+        <!-- SECURITY begin -->
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-web</artifactId>
+        </dependency>
+        <!-- SECURITY end -->
+
+        <!-- JSON -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
+        <!--for joda-->
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-joda</artifactId>
+        </dependency>
+
+        <!-- GENERAL UTILS begin -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+        </dependency>
+        <!-- GENERAL UTILS end -->
+
+        <!-- OTHER UTILS begin-->
+        <dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>commons-httpclient</groupId>
+            <artifactId>commons-httpclient</artifactId>
+            <version>3.1</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!-- HTML解析 -->
+        <dependency>
+            <!-- jsoup HTML parser library @ http://jsoup.org/ -->
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>1.6.1</version>
+        </dependency>
+
+        <!-- 验证码 -->
+        <dependency>
+            <groupId>org.patchca</groupId>
+            <artifactId>patchca</artifactId>
+            <version>0.5.0</version>
+        </dependency>
+
+        <!-- HTML 压缩 start -->
+        <dependency>
+            <groupId>com.googlecode.htmlcompressor</groupId>
+            <artifactId>htmlcompressor</artifactId>
+            <version>1.5.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.yahoo.platform.yui</groupId>
+            <artifactId>yuicompressor</artifactId>
+            <version>2.4.7</version>
+        </dependency>
+        <!-- HTML 压缩 end -->
+
+        <!-- snappy 加密 -->
+        <dependency>
+            <groupId>org.xerial.snappy</groupId>
+            <artifactId>snappy-java</artifactId>
+            <version>1.0.4.1</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- OAuth start -->
+        <dependency><!-- ct-common 中例子使用的 OAuth -->
+            <groupId>org.scribe</groupId>
+            <artifactId>scribe</artifactId>
+            <version>1.3.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.scribe</groupId>
+            <artifactId>scribe-up</artifactId>
+            <version>1.1.0</version>
+        </dependency>
+        <!-- OAuth end -->
+        <!-- OTHER UTILS end-->
+
+        <!-- TEST begin -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <!-- for xxxDemo class -->
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.powermock</groupId>
+            <artifactId>powermock-module-junit4</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.powermock</groupId>
+            <artifactId>powermock-api-mockito</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springside</groupId>
+            <artifactId>springside-test</artifactId>
+            <!-- for xxxDemo class -->
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <!-- for xxxDemo class -->
+            <scope>compile</scope>
+        </dependency>
+        <!-- TEST end -->
+    </dependencies>
+
+    <!-- =========================================================== -->
+    <!-- Build settings                                              -->
+    <!-- =========================================================== -->
+
+    <build>
+        <finalName>utils-common</finalName>
+        <plugins>
+            <!-- 打源码包 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <configuration>
+                    <attach>true</attach>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- test插件, 仅测试名称为*Test的类,使用支持分组测试的surefire-junit47 driver -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <includes>
+                        <include>**/*Test.java</include>
+                    </includes>
+                    <argLine>-Xmx256M -Dfile.encoding=UTF-8</argLine>
+                </configuration>
+            </plugin>
+
+            <!-- cobertura插件 ,取消不需要计算覆盖率的类 -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>cobertura-maven-plugin</artifactId>
+                <configuration>
+                    <instrumentation>
+                        <excludes>
+                            <exclude>**/entity/*.class</exclude>
+                            <exclude>**/dto/*.class</exclude>
+                            <exclude>**/*Controller.class</exclude>
+                            <exclude>**/*Demo.class</exclude>
+                        </excludes>
+                    </instrumentation>
+                </configuration>
+            </plugin>
+
+            <!-- eclipse插件, 设定wtp版本并添加springIDE nature -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-eclipse-plugin</artifactId>
+                <configuration>
+                    <wtpversion>2.0</wtpversion>
+                    <additionalProjectnatures>
+                        <projectnature>org.springframework.ide.eclipse.core.springnature</projectnature>
+                    </additionalProjectnatures>
+                </configuration>
+            </plugin>
+
+            <!-- enforcer, 规则统一定义在parent -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+    <!-- =========================================================== -->
+    <!-- Project Information                                         -->
+    <!-- =========================================================== -->
+
+    <licenses>
+        <license>
+            <name>GNU Lesser General Public License (LGPL)</name>
+            <url>http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt</url>
+        </license>
+    </licenses>
+</project>
